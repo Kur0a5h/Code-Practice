@@ -5,7 +5,17 @@ function startGame(){
 }
 
 const inputArray=[
-    [t,f,t],
-    [f,t,t],
-    [f,f,f]
-]
+    [1,0,1],
+    [0,1,1],
+    [0,0,0]
+];
+
+const output =[];
+
+function loopToCheckforBombLocations(){
+    for(i=0;i<inputArray.length;i++){
+        
+
+    }
+
+}
