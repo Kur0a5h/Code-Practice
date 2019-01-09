@@ -26,12 +26,12 @@ function keypressConcat(num){
         }
     }
     
-    if(newOutput===0){
+    if(newOutput.length===0){
         console.log(output)
     return output;
     }else{
         output=newOutput;
-        console.log(output)
-        return output;
+        console.log(newOutput)
+        return newOutput;
     }
 }
