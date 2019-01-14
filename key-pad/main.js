@@ -1,14 +1,22 @@
 // $(document).ready(()=>{
 
 // })
-const keypad=[['a','b','c'],['d','e','f'],['g','h','i'],['j','k','l'],['m','n','o'],['p','q','r','s'],['t','u','v'],['w','x','y','z']];
+var keypad=[['a','b','c'],['d','e','f'],['g','h','i'],['j','k','l'],['m','n','o'],['p','q','r','s'],['t','u','v'],['w','x','y','z']];
 var output=[];
+var newOutput=[];
 
-
+function inputNumberString(numstr){
+    numberArray=numstr.split("");
+    for(k=0;k<numberArray.length;k++){
+        keypressConcat(parseInt((numberArray[k])));
+    };
+    return output;
+    
+}
 function keypressConcat(num){
     letterArrayIndex=num-2;
     letterArray=keypad[letterArrayIndex];
-    var newOutput=[];
+    
     if(output.length===0){
     for(i=0;i<letterArray.length;i++){
         
@@ -27,11 +35,9 @@ function keypressConcat(num){
     }
     
     if(newOutput.length===0){
-        console.log(output)
     return output;
     }else{
         output=newOutput;
-        console.log(newOutput)
         return newOutput;
     }
 }
